@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "Arrays"
+        "Arrays",
+        "Trees"
     ],
     "java.project.referencedLibraries": []
 }
