@@ -12,3 +12,8 @@
 - an element that is strictly greater than all of its adjacent neighbors (left, right, top, bottom). The task is to find any peak element and return its coordinates [i, j].
 - Optimal Solution : Binary Search - Time Complexity (O(m log n))
 
+# 4-Sum Problem
+- 2 pointers with Sorting
+
+
+
