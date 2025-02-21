@@ -8,3 +8,7 @@
 - Search and Sorted always relate to Binary Search
 - Eg. [7 8 9 1 2 3 4] target=3 find index value if it exists or else return -1
 
+# Peak Element in 2D grid
+- an element that is strictly greater than all of its adjacent neighbors (left, right, top, bottom). The task is to find any peak element and return its coordinates [i, j].
+- Optimal Solution : Binary Search - Time Complexity (O(m log n))
+
