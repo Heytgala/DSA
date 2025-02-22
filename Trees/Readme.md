@@ -12,3 +12,7 @@
 
 # Traversal Technique - Breadth First Search (BFS) 
 - Traverses level wise
+
+# ArrayDeque
+- resizable array implementation of the double-ended queue (deque) in Java.
+- part of the java.util package and provides an efficient way to add and remove elements from both ends of the queue.
