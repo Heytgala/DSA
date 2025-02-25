@@ -15,5 +15,9 @@
 # 4-Sum Problem
 - 2 pointers with Sorting
 
+# Merge Sort
+- uses Divide and Merge Concept
+- We can use recursion method 
+- Always O(n log n), regardless of input order.
 
 
