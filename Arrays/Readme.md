@@ -20,4 +20,9 @@
 - We can use recursion method 
 - Always O(n log n), regardless of input order.
 
+# Reverse Pairs
+- Rule ("i"<"j") && (a[i] > 2 * a[j])
+- Use Merge Sort method 
+- TC : O(2nlogn) & SC: O(n)
+ 
 
