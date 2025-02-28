@@ -26,3 +26,16 @@
 - TC : O(2nlogn) & SC: O(n)
  
 
+# DYNAMIC PROGRAMMING
+- Used to store answer to various sub-problems.
+- 2 approaches: 
+    a. Memoization: top-down approach
+    b. Tabulation: bottom-up approach
+- When to use 
+    - Count total no of ways
+    - Minimal or Maximal output
+- Trick 
+    - Try to represent problem in terms of index
+    - Do all possible stuff on index accoridng to problem statement
+    - Sum of all stuffs = count all ways
+    - Min of all stuffs = to find min
