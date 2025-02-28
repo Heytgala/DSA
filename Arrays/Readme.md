@@ -39,3 +39,7 @@
     - Do all possible stuff on index accoridng to problem statement
     - Sum of all stuffs = count all ways
     - Min of all stuffs = to find min
+
+# Shortest Common Supersequence
+- Compute LCS: Using dynamic programming to build the LCS table (dp).
+- Construct SCS from LCS: Trace back through the LCS table to merge the strings into the shortest supersequence.
