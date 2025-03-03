@@ -29,7 +29,7 @@
 # DYNAMIC PROGRAMMING
 - Used to store answer to various sub-problems.
 - 2 approaches: 
-    a. Memoization: top-down approach
+    a. Memoization: top-down approach -- Used for Overlapping subproblems
     b. Tabulation: bottom-up approach
 - When to use 
     - Count total no of ways
