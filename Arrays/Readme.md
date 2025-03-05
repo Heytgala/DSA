@@ -43,3 +43,7 @@
 # Shortest Common Supersequence
 - Compute LCS: Using dynamic programming to build the LCS table (dp).
 - Construct SCS from LCS: Trace back through the LCS table to merge the strings into the shortest supersequence.
+
+# Minimum Path Sum -- Microsoft Interview Question
+- Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
+- Dynamic Programming problem
