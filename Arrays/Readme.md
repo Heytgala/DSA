@@ -24,6 +24,21 @@
 - Rule ("i"<"j") && (a[i] > 2 * a[j])
 - Use Merge Sort method 
 - TC : O(2nlogn) & SC: O(n)
+
+# Repeat and Inverse Numbers (Missing)
+- 2 Optimal approaches
+  - Math
+    1) Summation of n numbers
+    2) summation of squares of n numbers
+  - XOR
+    1) XOR all elements in array and numbers between 1 and N.
+    2) In order to find the position of the first set bit from the right, we can either use a loop or we can perform AND of the xr and negation of (xr-1) i.e. (xr & ~(xr-1)).
+    3) Now, we will take two variables i.e. zero and one. Now, we will check the bit of that position for every element (array elements as well as numbers between 1 to N).
+        -> If the bit is 1: We will XOR that element with variable one.
+        -> If the bit is 0: We will XOR that element with variable zero.
+    4) Finally, we have two variables i.e. two numbers zero and one. Among them, one is repeating and the other is missing. It’s time to identify them. 
+        -> We will traverse the entire array and check how many times variable zero appears. 
+        -> If it appears twice, it will be the repeating number, otherwise, it will be the missing. Now, based on variable zero’s identity, we can easily identify in which category, variable one belongs.
  
 
 # DYNAMIC PROGRAMMING
