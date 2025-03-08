@@ -20,6 +20,12 @@
 - We can use recursion method 
 - Always O(n log n), regardless of input order.
 
+
+# Count Inversion
+- Use Merge Sort Method
+- TC: O(n log(n))
+- SC: O(n) -- Distorting/Altering the array instead of copying the data
+
 # Reverse Pairs
 - Rule ("i"<"j") && (a[i] > 2 * a[j])
 - Use Merge Sort method 
