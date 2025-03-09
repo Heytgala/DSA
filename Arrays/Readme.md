@@ -15,6 +15,11 @@
 # 4-Sum Problem
 - 2 pointers with Sorting
 
+# Largest Sub Array sum
+- contigeous part of array
+- Using Prefix Sum & HashMap concept for optimal solution
+- TC: O(N) & SC: O(N)
+
 # Merge Sort
 - uses Divide and Merge Concept
 - We can use recursion method 
