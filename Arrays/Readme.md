@@ -17,7 +17,8 @@
 
 # Largest Sub Array sum
 - contigeous part of array
-- Using Prefix Sum & HashMap concept for optimal solution
+- Using Prefix Sum & HashMap concept for optimal solution - It works for all positive, negative and 0 values.
+- Using 2 pointer approach - It works for only positive and 0 values.
 - TC: O(N) & SC: O(N)
 
 # Merge Sort
