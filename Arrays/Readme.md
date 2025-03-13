@@ -12,9 +12,6 @@
 - an element that is strictly greater than all of its adjacent neighbors (left, right, top, bottom). The task is to find any peak element and return its coordinates [i, j].
 - Optimal Solution : Binary Search - Time Complexity (O(m log n))
 
-# 4-Sum Problem
-- 2 pointers with Sorting
-
 # Largest Sub Array sum
 - contigeous part of array
 - Using Prefix Sum & HashMap concept for optimal solution - It works for all positive, negative and 0 values.
@@ -74,3 +71,15 @@
 # Minimum Path Sum -- Microsoft Interview Question
 - Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
 - Dynamic Programming problem
+
+
+
+
+# FANG COMPANY PROBLEMS
+
+1) Longest Substring with No Repeat Characters
+   - Amazon Interview Question
+   - Sliding Window, Hash Table concept
+
+2) 4-Sum Problem
+   - 2 pointers with Sorting
