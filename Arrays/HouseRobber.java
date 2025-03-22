@@ -30,5 +30,6 @@ public class HouseRobber {
         HouseRobber hr = new HouseRobber();
         int result = hr.rob(nums);
         System.out.println("Result: " + result);
+        scanner.close();
     }
 }

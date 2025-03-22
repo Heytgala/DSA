@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MergeSort {
 
-    public static void MergeSort(int[] nums){
+    public static void Mergesort(int[] nums){
         int n= nums.length;
         if(n<2){
             return;
@@ -17,8 +17,8 @@ public class MergeSort {
             right[i-mid]=nums[i];
         }
 
-        MergeSort(left);
-        MergeSort(right);
+        Mergesort(left);
+        Mergesort(right);
         Merge(nums,left,right);
 
     }
@@ -52,7 +52,7 @@ public class MergeSort {
             nums[i]=Integer.parseInt(input[i]);
         }
 
-        MergeSort(nums);
+        Mergesort(nums);
 
         System.out.println("Sorted array:");
         for (int num : nums) {

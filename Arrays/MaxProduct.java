@@ -30,5 +30,6 @@ public class MaxProduct {
         int result = mp.maxProduct(nums);
 
         System.out.println("The result: " +result);
+        scanner.close();
     }
 }

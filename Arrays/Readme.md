@@ -3,6 +3,11 @@
 1) Iterative Method - 2 pointers approach & It will always be sorted array; Best for large dataset and efficient performance in memory.
 2) Recursion Method - uses function recursion; slightly slower due to function call overhead.
 
+# Aggressive Cows
+-  Problem Statement: You are given an array 'nums' of size 'n' which denotes the position of stalls. You are also given an integer 'k' which denotes the number of aggressive cows. You are given the task of assigning stalls to 'k' cows such that the minimum distance between any two of them is the maximum possible. Find the maximum possible minimum distance.
+- Binary search approach
+
+
 # Rotated Sorted Array 
 - Elements will be always unique 
 - Search and Sorted always relate to Binary Search
