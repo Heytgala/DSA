@@ -40,3 +40,30 @@ It simplifies reversing linked list nodes by breaking the list into segments of 
               - Update count by subtracting k (since we've reversed one group of k nodes).
         e. Return the Result:
            - Once all possible groups are reversed, return dummy.next, which points to the new head of the list.
+
+## FLATTENING OF LINKED LIST (Amazon,Microsoft)
+### Algorithm:
+   a. Input Parsing
+      - Read integer k – the number of sorted linked lists to merge.
+      - For each list from 1 to k:
+         - Read the number of elements n.
+         - Read n integers in sorted order.
+         - Create a singly linked list from those elements.
+         - Store the head of each list in a list called listHeads.
+
+   b. Merge Two Sorted Linked Lists (mergetwolist)
+      - Initialize a dummy node to simplify list manipulation.
+      - Use a tail pointer starting at the dummy node.
+      - While both lists are non-null:
+         - Compare the current values of list1 and list2.
+         - Append the smaller value node to tail.next.
+         - Move tail forward.
+         - Advance in the list whose node was selected.
+      - After the loop, append the remaining nodes of the non-null list (either list1 or list2).
+
+   c. Flatten All Lists (flattenll)
+      - Set merged = listHeads[0] (first list).
+      - Loop through listHeads from index 1 to k-1:
+         - Merge merged with the current list using mergetwolist.
+         - Update merged with the result.
+      - Return the fully merged list (merged) at the end.
