@@ -67,3 +67,24 @@ It simplifies reversing linked list nodes by breaking the list into segments of 
          - Merge merged with the current list using mergetwolist.
          - Update merged with the result.
       - Return the fully merged list (merged) at the end.
+
+## Rotate Linked List (Amazon)
+### Algorithm:
+   a. Handle edge case:
+      - If the list is empty (head == null), has only one node (head.next == null), or k <= 0, return head as it is (no rotation needed).
+   b. Find the Length of the List and the Last Node:
+      - Initialize current = head and length = 1.
+      - Traverse the list till you reach the last node (current.next == null).
+      - While traversing, increment the length by 1 at each step.
+   c. Make the List Circular:
+      - After reaching the last node, connect it back to the head (current.next = head).
+      - Now the linked list becomes circular.
+   d. Adjust k within the Length:
+      - Compute k = k % length because rotating by the length of the list brings it back to the original position.
+      - Update k = length - k to find the correct number of steps to move forward to break the circle at the correct point.
+   e. Find the New Tail:
+      - Move current forward by k steps. (while(k-- > 0) current = current.next)
+   f. Break the Circle and Update the Head:
+      - The next node of current (current.next) becomes the head.
+      - Set current.next = null to break the loop and finalize the new list.
+   g. Return the Head.
