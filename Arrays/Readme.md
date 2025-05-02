@@ -55,6 +55,10 @@
         -> If it appears twice, it will be the repeating number, otherwise, it will be the missing. Now, based on variable zero’s identity, we can easily identify in which category, variable one belongs.
  
 
+# Trap Rain Water
+- 2 pointer Approach
+- Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+
 # DYNAMIC PROGRAMMING
 - Used to store answer to various sub-problems.
 - 2 approaches: 
