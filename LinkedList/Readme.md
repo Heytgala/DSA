@@ -88,3 +88,13 @@ It simplifies reversing linked list nodes by breaking the list into segments of 
       - The next node of current (current.next) becomes the head.
       - Set current.next = null to break the loop and finalize the new list.
    g. Return the Head.
+
+
+# DOUBLY LINKED LIST
+Forward and Backward Traversal
+Easy at both ends (head and tail)
+More flexible
+More Memory Usage (2pointers per node)
+
+### Delete Occurrence of Key in Doubly Linked List
+
