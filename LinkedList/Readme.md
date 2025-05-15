@@ -1,8 +1,8 @@
 # LINKED LIST
-Data Structure: Non-contiguous
-Memory Allocation: Typically allocated one by one to individual elements
-Insertion/Deletion: Efficient
-Access: Sequential
+- Data Structure: Non-contiguous
+- Memory Allocation: Typically allocated one by one to individual elements
+- Insertion/Deletion: Efficient
+- Access: Sequential
 
 ## 1. Merge 2 sorted list
 ### Algorithm:
@@ -70,31 +70,49 @@ It simplifies reversing linked list nodes by breaking the list into segments of 
 
 ## Rotate Linked List (Amazon)
 ### Algorithm:
-   a. Handle edge case:
+    a. Handle edge case:
       - If the list is empty (head == null), has only one node (head.next == null), or k <= 0, return head as it is (no rotation needed).
-   b. Find the Length of the List and the Last Node:
+    b. Find the Length of the List and the Last Node:
       - Initialize current = head and length = 1.
       - Traverse the list till you reach the last node (current.next == null).
       - While traversing, increment the length by 1 at each step.
-   c. Make the List Circular:
+    c. Make the List Circular:
       - After reaching the last node, connect it back to the head (current.next = head).
       - Now the linked list becomes circular.
-   d. Adjust k within the Length:
+    d. Adjust k within the Length:
       - Compute k = k % length because rotating by the length of the list brings it back to the original position.
       - Update k = length - k to find the correct number of steps to move forward to break the circle at the correct point.
-   e. Find the New Tail:
+    e. Find the New Tail:
       - Move current forward by k steps. (while(k-- > 0) current = current.next)
-   f. Break the Circle and Update the Head:
+    f. Break the Circle and Update the Head:
       - The next node of current (current.next) becomes the head.
       - Set current.next = null to break the loop and finalize the new list.
-   g. Return the Head.
+    g. Return the Head.
 
 
 # DOUBLY LINKED LIST
-Forward and Backward Traversal
-Easy at both ends (head and tail)
-More flexible
-More Memory Usage (2pointers per node)
+- Forward and Backward Traversal
+- Easy at both ends (head and tail)
+- More flexible
+- More Memory Usage (2pointers per node)
 
-### Delete Occurrence of Key in Doubly Linked List
+## Delete Occurrence of Key in Doubly Linked List
+### Algorithm:
+    a. Initialize pointer temp to head
+    b. Loop while temp is not null:
+       - if temp.val==key:
+         - Set nextNode = temp.next
+         - Set prevNode = temp.prev
+         - if temp == head:
+           - Set head = nextNode
+           - If head is not null, set head.prev = null
+         - else:
+           - If prevNode is not null, set prevNode.next = nextNode
+           - If nextNode is not null, set nextNode.prev = prevNode
+         - Move temp to nextNode
+       - Else
+         - Move temp = temp.next
+    c. Return head
+### Time Complexity : O(N)
+### Space Complexity : O(1)
 
