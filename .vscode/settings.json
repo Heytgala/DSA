@@ -1,9 +1,10 @@
 {
     "java.project.sourcePaths": [
         "Trees",
+        "Stack-Queue",
         "LinkedList",
         "Arrays",
-        "Stack-Queue"
+        "DynamicProgramming"
     ],
     "java.project.referencedLibraries": []
 }
