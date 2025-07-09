@@ -3,8 +3,9 @@
         "Trees",
         "Stack-Queue",
         "LinkedList",
+        "DynamicProgramming",
         "Arrays",
-        "DynamicProgramming"
+        "Recursion"
     ],
     "java.project.referencedLibraries": []
 }
