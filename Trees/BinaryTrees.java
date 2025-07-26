@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class BinaryTrees {
     public class Node{
@@ -62,6 +63,44 @@ public class BinaryTrees {
         return result;
     }
 
+    //Iterative Preorder
+    public List<Integer> IterativePreorder(Node root){
+        List<Integer> result = new ArrayList<>();
+        if(root == null){
+            return result;
+        }
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            root = stack.pop();
+            result.add(root.data);
+            if(root.right!=null){
+                stack.push(root.right);
+            }
+            if(root.left!=null){
+                stack.push(root.left);
+            }
+        }
+        return result;
+    }
+
+    //Iterative Inorder
+    public List<Integer> IterativeInorder(Node root){
+        List<Integer> result = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        Node current = root;
+        while(current != null || !stack.isEmpty()){
+            while(current !=null){
+                stack.push(current);
+                current = current.left;
+            }
+            current = stack.pop();
+            result.add(current.data);
+            current = current.right;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         BinaryTrees bt = new BinaryTrees();
 
@@ -78,6 +117,13 @@ public class BinaryTrees {
         }
         System.out.println();
 
+        List<Integer> iterative_preorder_result = bt.IterativePreorder(root);
+        System.out.print("Iterative Preorder Traversal: ");
+        for (int val : iterative_preorder_result) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
         result = bt.postorderTraversal(root);
         System.out.print("Postorder Traversal: ");
         for (int val : result) {
@@ -88,6 +134,13 @@ public class BinaryTrees {
         result = bt.inorderTraversal(root);
         System.out.print("Inorder Traversal: ");
         for (int val : result) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
+        List<Integer> iterative_inorder_result = bt.IterativeInorder(root);
+        System.out.print("Iterative Inorder Traversal: ");
+        for (int val : iterative_inorder_result) {
             System.out.print(val + " ");
         }
         System.out.println();
