@@ -4,6 +4,7 @@
 2) Complete BT - All levels completely filled except last level; last level has all nodes in "left" as possible.
 3) Perfect BT - All leaf nodes are at same level
 4) Balanced BT - height of tree at max "log(n)" where n is no of nodes
+5) Degenerate Tree - every node has single children
 
 # Traversal Technique - (DFS)
 - Inorder Traversal (Left Root Right)
