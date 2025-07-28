@@ -101,6 +101,60 @@ public class BinaryTrees {
         return result;
     }
 
+    //Iterative Postorder using two stacks
+    public List<Integer> IterativePostorder(Node root) {
+        Stack<Node> stack1 = new Stack<>();
+        Stack<Node> stack2 = new Stack<>();
+        List<Integer> result = new ArrayList<>();
+        if(root == null) {
+            return result;
+        }
+        stack1.push(root);
+        while(!stack1.isEmpty()){
+            root = stack1.pop();
+            stack2.push(root);
+            if(root.left!=null){
+                stack1.push(root.left);
+            }
+            if(root.right!=null){
+                stack1.push(root.right);
+            }
+        }
+        while(!stack2.isEmpty()){
+            result.add(stack2.pop().data);
+        }
+        return result;
+    }
+
+    //Iterative Postorder using one stack
+    public List<Integer> IterativePostorderOneStack(Node root) {
+        Stack<Node> stack = new Stack<>();
+        List<Integer> result = new ArrayList<>();
+        Node current = root;
+        Node temp = null;
+        while(current != null || !stack.isEmpty()){
+            if(current != null){
+                stack.push(current);
+                current = current.left;
+            }
+            else{
+                temp = stack.peek().right;
+                if(temp == null){
+                    temp = stack.pop();
+                    result.add(temp.data);
+                    while(!stack.isEmpty() && temp == stack.peek().right){
+                        temp = stack.pop();
+                        result.add(temp.data);
+                    }
+                }
+                else{
+                    current = temp;
+                }
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         BinaryTrees bt = new BinaryTrees();
 
@@ -127,6 +181,20 @@ public class BinaryTrees {
         result = bt.postorderTraversal(root);
         System.out.print("Postorder Traversal: ");
         for (int val : result) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
+        List<Integer> iterative_postorder_result = bt.IterativePostorder(root);
+        System.out.print("Iterative Postorder Traversal using 2 stack: ");
+        for (int val : iterative_postorder_result) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
+        List<Integer> iterative_postorder_one_stack_result = bt.IterativePostorderOneStack(root);
+        System.out.print("Iterative Postorder Traversal using 1 stack: ");
+        for (int val : iterative_postorder_one_stack_result) {
             System.out.print(val + " ");
         }
         System.out.println();
