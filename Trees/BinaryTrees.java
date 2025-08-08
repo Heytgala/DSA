@@ -84,6 +84,34 @@ public class BinaryTrees {
         return result;
     }
 
+    // Morris Preorder Traversal
+    public List<Integer> MorrisPreorder(Node root) {
+        List<Integer> result = new ArrayList<>();
+        Node current = root;
+        while(current != null){
+            if(current.left == null){
+                result.add(current.data);
+                current = current.right;
+            }
+            else{
+                Node pre = current.left;
+                while(pre.right != null && pre.right != current){
+                    pre = pre.right;
+                }
+                if(pre.right == null){
+                    pre.right = current;
+                    result.add(current.data);
+                    current = current.left;
+                }
+                else{
+                    pre.right = null;
+                    current = current.right;
+                }
+            }
+        }
+        return result;
+    }
+
     //Iterative Inorder
     public List<Integer> IterativeInorder(Node root){
         List<Integer> result = new ArrayList<>();
@@ -99,6 +127,35 @@ public class BinaryTrees {
             current = current.right;
         }
         return result;
+    }
+
+    //Morris Inorder Traversal
+    public List<Integer> MorrisInorder(Node root) {
+        List<Integer> result = new ArrayList<>();
+        Node current = root;
+        while(current != null){
+            if(current.left == null){
+                result.add(current.data);
+                current = current.right;
+            }
+            else{
+                Node pre = current.left;
+                while(pre.right != null && pre.right != current){
+                    pre = pre.right;
+                }
+                if(pre.right == null){
+                    pre.right = current;
+                    current = current.left;
+                }
+                else{
+                    pre.right = null;
+                    result.add(current.data);
+                    current= current.right;
+                }
+            }
+        }
+        return result;
+
     }
 
     //Iterative Postorder using two stacks
@@ -178,6 +235,13 @@ public class BinaryTrees {
         }
         System.out.println();
 
+        List<Integer> morris_preorder_result = bt.MorrisPreorder(root);
+        System.out.print("Morris Preorder Traversal: ");
+        for (int val : morris_preorder_result) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
         result = bt.postorderTraversal(root);
         System.out.print("Postorder Traversal: ");
         for (int val : result) {
@@ -209,6 +273,13 @@ public class BinaryTrees {
         List<Integer> iterative_inorder_result = bt.IterativeInorder(root);
         System.out.print("Iterative Inorder Traversal: ");
         for (int val : iterative_inorder_result) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+
+        List<Integer> morris_inorder_result = bt.MorrisInorder(root);
+        System.out.print("Morris Inorder Traversal: ");
+        for (int val : morris_inorder_result) {
             System.out.print(val + " ");
         }
         System.out.println();
