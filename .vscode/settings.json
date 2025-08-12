@@ -2,10 +2,11 @@
     "java.project.sourcePaths": [
         "Trees",
         "Stack-Queue",
+        "Recursion",
         "LinkedList",
         "DynamicProgramming",
         "Arrays",
-        "Recursion"
+        "Heaps"
     ],
     "java.project.referencedLibraries": []
 }
