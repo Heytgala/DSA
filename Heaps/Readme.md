@@ -12,3 +12,20 @@
 - Right child: 2 * i + 1 index
 - Parent: i/2 
 ```
+
+# Priority Queue 
+- It is used for Heap concept. 
+- It by default uses Min Heap functionality.
+``` bash
+-- MIN HEAP
+PriorityQueue<int> pq = new PriorityQueue<Integer>();
+pq.add(1);
+pq.add(4);
+pq.add(2);
+
+-- MAX HEAP
+PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
+pq.add(1);
+pq.add(4);
+pq.add(3);
+```
