@@ -46,9 +46,9 @@ public class MergeKSortedArrays {
 
     public static void main(String[] args) {
         List<List<Integer>> arrays = new ArrayList<>();
-        arrays.add(List.of(1, 4, 7));
-        arrays.add(List.of(2, 5, 8));
-        arrays.add(List.of(3, 6, 9));
+        arrays.add(List.of(1, 5, 7));
+        arrays.add(List.of(2, 3, 6));
+        arrays.add(List.of(4, 8, 9));
 
         MergeKSortedArrays merger = new MergeKSortedArrays();
         List<Integer> mergedArray = merger.mergeKarrays(arrays, arrays.size());
